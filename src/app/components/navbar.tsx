@@ -12,17 +12,17 @@ function Navbar() {
             <div className="flex-none">
                 <ul className="menu menu-horizontal px-1">
                     <li>
-                        <Link href="/link">
+                        <Link href="/">
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/partners">
                             Partners
                         </Link>
                     </li>
                     <li>
-                        <Link href="/link">
-                            Teams
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/link">
+                        <Link href="/contact">
                             Contact
                         </Link>
                     </li>
