@@ -2,7 +2,7 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div className="hero min-h-screen min-w-screen bg-base-200 bg-opacity-50" style={{backgroundImage: 'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)'}}>
+    <div className="hero min-h-screen min-w-screen bg-blue-200 bg-opacity-50 " >
   <div className="hero-content text-center">
     <div className="max-w-md">
       <p></p>
