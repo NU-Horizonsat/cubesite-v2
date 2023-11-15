@@ -26,6 +26,7 @@ export default function RootLayout({
       <body className={spaceMono.className}>
         <Navbar />
         {children}
+        
         </body>
     </html>
   )
