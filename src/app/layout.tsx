@@ -22,12 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      
-      <body className={spaceMono.className}>
+      <body className={`${spaceMono.className} scrollbar-thin scrollbar-thumb-red-800 scrollbar-track-slate-950`}>
         <Navbar />
         {children}
-        
-        </body>
+      </body>
     </html>
   )
 }
