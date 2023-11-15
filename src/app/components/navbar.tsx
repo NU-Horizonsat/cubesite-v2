@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Navbar() {
     return (
-        <div className="navbar text-white bg-black sticky top-0 z-50">
+        <nav className="navbar text-white bg-black sticky top-0 z-50">
             <div className="flex-1">
                 <Link href="/">
                     <Image src="/logo.png" alt="logo" width={300} height={128} />
@@ -28,7 +28,7 @@ function Navbar() {
                     </li>
                 </ul>
             </div>
-        </div>
+        </nav>
     );
 }
 
