@@ -17,8 +17,8 @@ _italic_
 __underline__
 ~~strikethrough~~
 `code`
-```xml
-<pre a="b">
+```html
+<pre class="b">
     Lorem ipsum dolor sit amet.
 </pre>
 ```
@@ -26,6 +26,13 @@ __underline__
 | abc   | def | ghi  |
 |-------|-----|------|
 | table | go  | brrr |
+
+block math! (uses TeX syntax)
+$$
+\sum_{k = 0}^{n}{\binom{n}{k}} = 2^{n}
+$$
+
+inline $\sum_{k = 0}^{n}{\binom{n}{k}} = 2^{n}$ math!
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 Sagittis vitae et leo duis ut diam quam nulla.

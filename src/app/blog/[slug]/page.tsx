@@ -1,6 +1,10 @@
 import matter from "gray-matter";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import rehypeHighlight from "rehype-highlight";
+import remarkRehype from "remark-rehype";
 
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -19,6 +23,9 @@ interface MatterMeta {
 }
 
 const BlogPage = async ({ params: { slug } }: BlogPageProps) => {
+    // lots of work happening here, but this only runs _once_ (at build time), so this won't be slowing
+    // the site down at runtime. On request only a static page gets sent
+
     const files = (await fs.readdir(path.join(".", "public", "raw", "blog")))
         .filter(f => f.endsWith(".md"));
 
@@ -38,7 +45,8 @@ const BlogPage = async ({ params: { slug } }: BlogPageProps) => {
         <div>
             {JSON.stringify(data)}
             <article>
-                <Markdown remarkPlugins={[remarkGfm]}>
+                <Markdown remarkPlugins={[remarkGfm, remarkMath, remarkRehype]}
+                          rehypePlugins={[rehypeKatex, rehypeHighlight]}>
                     {content}
                 </Markdown>
             </article>
