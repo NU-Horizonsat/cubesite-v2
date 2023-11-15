@@ -1,20 +1,18 @@
 ---
 title: Test Blog Article
 author: Horizon Sat
-date: 2023-11-13
+created: 2023-11-13
+updated: 2023-11-15
 slug: blog-test # /blog/test
 ---
 
 # h1
 ## h2
 ### h3
-#### h4
-##### h5
-###### h6
+[//]: # (don't use levels over h3)
 
 **bold**
 _italic_
-__underline__
 ~~strikethrough~~
 `code`
 ```html

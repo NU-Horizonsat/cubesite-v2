@@ -18,7 +18,8 @@ interface BlogPageProps {
 interface MatterMeta {
     title: string,
     author: string,
-    date: string,
+    created: Date,
+    updated: Date,
     slug: string,
 }
 
@@ -26,11 +27,15 @@ const BlogPage = async ({ params: { slug } }: BlogPageProps) => {
     // lots of work happening here, but this only runs _once_ (at build time), so this won't be slowing
     // the site down at runtime. On request only a static page gets sent
 
-    const files = (await fs.readdir(path.join(".", "public", "raw", "blog")))
-        .filter(f => f.endsWith(".md"));
+    const files = (await fs.readdir(path.join(".", "public", "raw", "blog"), {
+        recursive: true,
+        withFileTypes: true,
+    }))
+        .filter(f => f.isFile() && f.name.endsWith(".md"))
+        .map(f => path.join(f.path, f.name));
 
     const parsed = await Promise.all(files.map(async f => {
-        const content = await fs.readFile(path.join(".", "public", "raw", "blog", f), { encoding: "utf-8" });
+        const content = await fs.readFile(f, { encoding: "utf-8" });
         return matter(content);
     }));
     const matterFile = parsed.find(f => f.data.slug === slug)!;
@@ -42,25 +47,38 @@ const BlogPage = async ({ params: { slug } }: BlogPageProps) => {
     const { content } = matterFile;
 
     return (
-        <div>
-            {JSON.stringify(data)}
-            <article className="prose mx-auto">
+        <main className="mx-auto w-fit">
+            <section className="w-fit">
+                <h1 className="max-w-fit">{data.title}</h1>
+                <div>
+                    <span>By {data.author}</span>
+                    <div>
+                        <span>Published {data.created.toLocaleDateString()}</span>
+                        :
+                        <span>Updated {data.updated.toLocaleDateString()}</span>
+                    </div>
+                </div>
+            </section>
+            <article className="prose">
                 <Markdown remarkPlugins={[remarkGfm, remarkMath, remarkRehype]}
                           rehypePlugins={[rehypeKatex, rehypeHighlight]}>
                     {content}
                 </Markdown>
             </article>
-        </div>
+        </main>
     );
 };
 
 export async function generateStaticParams() {
-    const filenames = (await fs.readdir(path.join(".", "public", "raw", "blog")))
-        .filter(file => file.endsWith(".md"));
+    const filenames = (await fs.readdir(path.join(".", "public", "raw", "blog"), {
+        recursive: true,
+        withFileTypes: true,
+    })).filter(file => file.isFile() && file.name.endsWith(".md"))
+        .map(f => path.join(f.path, f.name));
 
     const contents = await Promise.all(
         filenames.map(async f =>
-            await fs.readFile(path.join(".", "public", "raw", "blog", f), { encoding: "utf-8" }))
+            await fs.readFile(path.join(f), { encoding: "utf-8" }))
     );
 
     return contents.map((content) => ({ slug: matter(content).data.slug as string }));
