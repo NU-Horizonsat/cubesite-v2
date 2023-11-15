@@ -10,7 +10,7 @@ interface TileProps {
 function Tile({ name, title, description, members }: TileProps) {
     // expands to fill entire width of the page
     return (
-        <div className="card card-side bg-base-100 shadow-xl max-w-screen-xl">
+        <div className="card card-side text-white bg-gradient-to-t from-black to-gray-950 shadow-xl max-w-screen-md">
             <figure><Image src="/IMG_0978.png" alt="{name}" width={500} height={500}/></figure>
             <div className="card-body">
                 <h2 className="card-title">{name}</h2>
