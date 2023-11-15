@@ -6,12 +6,19 @@ import Cubesat from './components/cubesatdesktopcard'
 export default function Home() {
   return (
     <main>
-      <div className="flex flex-col space-y-4 justify-center items-center">
+      <div className="space-y-6">
         <Hero />
+      </div>
+      <div className="pt-48 pb-3 pl-48">
+      </div>
+       
+      <div className="flex flex-col space-y-6 items-center">
+      <h1 className=" text-white text-5xl text-left">Projects</h1>    
+      
         <Cubesat />
         <Devsat />
       </div>
-      <p>Home</p>
+      
     </main>
   )
 }
