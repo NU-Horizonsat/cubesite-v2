@@ -44,7 +44,7 @@ const BlogPage = async ({ params: { slug } }: BlogPageProps) => {
     return (
         <div>
             {JSON.stringify(data)}
-            <article>
+            <article className="prose mx-auto">
                 <Markdown remarkPlugins={[remarkGfm, remarkMath, remarkRehype]}
                           rehypePlugins={[rehypeKatex, rehypeHighlight]}>
                     {content}
