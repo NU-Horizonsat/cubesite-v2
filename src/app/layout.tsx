@@ -2,7 +2,11 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Navbar from './components/navbar'
-import Link from 'next/link'
+import { Space_Mono } from 'next/font/google'
+
+const spaceMono = Space_Mono({ 
+  subsets: ['latin'],
+  weight: ['400', '700']  })
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       
-      <body className={inter.className}>
+      <body className={spaceMono.className}>
         <Navbar />
         {children}
         </body>

@@ -7,7 +7,7 @@ function Cubesat() {
       <figure className="max-w-screen-xl"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Ncube2.jpg" alt="CubeSat"/></figure>
       <div className="card-body">
         <h2 className="card-title text-red-700 font-bold">CUBESAT</h2>
-        <p>launching in 2024!launching in 2024!launching in 2024!launching in 2024!launching in 2024!launching in 2024!launching in 2024!launching in 2024!launching in 2024!launching in 2024!launching in 2024!launching in 2024!launching in 2024!launching in 2024!launching in 2024!</p>
+        <p>This is the satellite we are launching in 2024! We have been making this bad boy for a while.</p>
       </div>
     </div>
   )
