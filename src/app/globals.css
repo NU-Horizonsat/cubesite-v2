@@ -1,3 +1,5 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.css");
+
 @tailwind base;
 
 @tailwind components;
@@ -32,5 +34,10 @@ body {
     rgb(var(--background-start-rgb));*/
     background-image: linear-gradient(black, black, #750100);
     
+}
+
+
+span.katex-html {
+  display: none;
 }
 

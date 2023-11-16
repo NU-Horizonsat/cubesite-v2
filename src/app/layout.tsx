@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+
 import Navbar from './components/navbar'
 import { Space_Mono } from 'next/font/google'
 

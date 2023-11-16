@@ -3,6 +3,7 @@ import Image from "next/image";
 
 function Navbar() {
     return (
+
         <div className="bg-opacity-70  navbar text-white bg-black sticky top-0 z-50">
             <div className="flex-1">
                 <Link href="/">
@@ -28,7 +29,7 @@ function Navbar() {
                     </li>
                 </ul>
             </div>
-        </div>
+        </nav>
     );
 }
 
