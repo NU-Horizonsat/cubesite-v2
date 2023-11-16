@@ -1,13 +1,10 @@
-import matter from "gray-matter";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import rehypeHighlight from "rehype-highlight";
 import remarkRehype from "remark-rehype";
-
-import fs from "node:fs/promises";
-import path from "node:path";
+import { allArticles } from "@/util/blog";
 
 interface BlogPageProps {
     params: {
@@ -26,19 +23,7 @@ interface MatterMeta {
 const BlogPage = async ({ params: { slug } }: BlogPageProps) => {
     // lots of work happening here, but this only runs _once_ (at build time), so this won't be slowing
     // the site down at runtime. On request only a static page gets sent
-
-    const files = (await fs.readdir(path.join(".", "public", "raw", "blog"), {
-        recursive: true,
-        withFileTypes: true,
-    }))
-        .filter(f => f.isFile() && f.name.endsWith(".md"))
-        .map(f => path.join(f.path, f.name));
-
-    const parsed = await Promise.all(files.map(async f => {
-        const content = await fs.readFile(f, { encoding: "utf-8" });
-        return matter(content);
-    }));
-    const matterFile = parsed.find(f => f.data.slug === slug)!;
+    const matterFile = (await allArticles()).find(f => f.data.slug === slug)!;
 
     // weird casting but makes our life easier
     // assumes that all properties are present,
@@ -70,18 +55,8 @@ const BlogPage = async ({ params: { slug } }: BlogPageProps) => {
 };
 
 export async function generateStaticParams() {
-    const filenames = (await fs.readdir(path.join(".", "public", "raw", "blog"), {
-        recursive: true,
-        withFileTypes: true,
-    })).filter(file => file.isFile() && file.name.endsWith(".md"))
-        .map(f => path.join(f.path, f.name));
-
-    const contents = await Promise.all(
-        filenames.map(async f =>
-            await fs.readFile(path.join(f), { encoding: "utf-8" }))
-    );
-
-    return contents.map((content) => ({ slug: matter(content).data.slug as string }));
+    return (await allArticles())
+        .map(m => ({ slug: m.data.slug }));
 }
 
 export default BlogPage;

@@ -4,7 +4,7 @@ import Image from "next/image";
 function Navbar() {
     return (
 
-        <div className="bg-opacity-70  navbar text-white bg-black sticky top-0 z-50">
+        <nav className="bg-opacity-70  navbar text-white bg-black sticky top-0 z-50">
             <div className="flex-1">
                 <Link href="/">
                     <Image src="/ph_banner.svg" alt="logo" width={300} height={128} />
