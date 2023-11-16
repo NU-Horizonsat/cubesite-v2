@@ -12,9 +12,12 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'hero-image': "url('/img3.png')",
       },
     },
+
   },
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+
+  plugins: [require("daisyui"), require('tailwind-scrollbar'),require("@tailwindcss/typography")],
 }
 export default config

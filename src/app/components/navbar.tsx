@@ -3,10 +3,11 @@ import Image from "next/image";
 
 function Navbar() {
     return (
-        <nav className="navbar text-white bg-black sticky top-0 z-50">
+
+        <div className="bg-opacity-70  navbar text-white bg-black sticky top-0 z-50">
             <div className="flex-1">
                 <Link href="/">
-                    <Image src="/logo.png" alt="logo" width={300} height={128} />
+                    <Image src="/ph_banner.svg" alt="logo" width={300} height={128} />
                 </Link>
             </div>
             <div className="flex-none">
