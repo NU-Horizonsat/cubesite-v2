@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google'
 import Navbar from './components/navbar'
 import { Space_Mono } from 'next/font/google'
 
-const spaceMono = Space_Mono({ 
+const spaceMono = Space_Mono({
   subsets: ['latin'],
   weight: ['400', '700']  })
 
@@ -25,7 +25,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${spaceMono.className} scrollbar-thin scrollbar-thumb-red-800 scrollbar-track-slate-950`}>
         <Navbar />
-        {children}
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   )

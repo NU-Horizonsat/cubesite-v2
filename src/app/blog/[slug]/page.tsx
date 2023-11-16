@@ -18,6 +18,7 @@ interface MatterMeta {
     created: Date,
     updated: Date,
     slug: string,
+    excerpt: string,
 }
 
 const BlogPage = async ({ params: { slug } }: BlogPageProps) => {
@@ -29,28 +30,30 @@ const BlogPage = async ({ params: { slug } }: BlogPageProps) => {
     // assumes that all properties are present,
     // but we'll probably crash later anyway if not.
     const data = matterFile.data as unknown as MatterMeta;
-    const { content } = matterFile;
+
+    // remove the excerpt section
+    const content = matterFile.content.replace(/.*?^-{3}$/sm, "");
 
     return (
-        <main className="mx-auto w-fit">
-            <section className="w-fit">
+        <article className="mx-auto w-fit prose">
+                <section className="w-fit">
                 <h1 className="max-w-fit">{data.title}</h1>
-                <div>
+                <div className="mb-4">
                     <span>By {data.author}</span>
                     <div>
-                        <span>Published {data.created.toLocaleDateString()}</span>
+                        <span className="mr-4">Published {data.created.toLocaleDateString()}</span>
                         :
-                        <span>Updated {data.updated.toLocaleDateString()}</span>
+                        <span className="ml-4">Updated {data.updated.toLocaleDateString()}</span>
                     </div>
                 </div>
             </section>
-            <article className="prose">
+            <section className="blog-content">
                 <Markdown remarkPlugins={[remarkGfm, remarkMath, remarkRehype]}
                           rehypePlugins={[rehypeKatex, rehypeHighlight]}>
                     {content}
                 </Markdown>
-            </article>
-        </main>
+            </section>
+        </article>
     );
 };
 

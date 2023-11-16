@@ -14,6 +14,6 @@ export async function allArticles() {
 
     return Promise.all(files.map(async f => {
         const content = await fs.readFile(f, {encoding: "utf-8"});
-        return matter(content);
+        return matter(content, { excerpt: true });
     }));
 }
