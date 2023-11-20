@@ -7,9 +7,6 @@
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/neofetch:1": {}
 	},
-	"runArgs": [
-		"--userns=keep-id"
-	  ],
 	  "containerEnv": {
 		"HOME": "/home/node"
 	  }

@@ -1,8 +1,6 @@
-import Image from 'next/image'
+'use client';
 import Hero from './components/Hero'
-import Devsat from './components/devsatdesktopcard'
-import Cubesat from './components/cubesatdesktopcard'
-import Hemholdtz from './components/hemholdtzdesktopcard'
+import TileProject from './components/tile_projects'
 
 export default function Home() {
   return (
@@ -16,9 +14,21 @@ export default function Home() {
       <div className="flex flex-col space-y-8 items-center">
       <h1 className=" text-white text-5xl text-left">Projects</h1>    
       
-        <Cubesat />
-        <Devsat />
-        <Hemholdtz />
+        <TileProject
+          name="CubeSat"
+          description="CubeSat is a 1U CubeSat that is being developed by Project Horizon. It is our first satellite and is currently in the design phase."
+          imagesrc="/nasa.png"
+        />
+        <TileProject
+          name="DevSat"
+          description="DevSat is a 3U CubeSat that is being developed by Project Horizon. It is our second satellite and is currently in the design phase."
+          imagesrc="/nasa.png"
+        />
+        <TileProject
+          name="Hemholdtz"
+          description="Hemholdtz is a 6U CubeSat that is being developed by Project Horizon. It is our third satellite and is currently in the design phase."
+          imagesrc="/nasa.png"
+        />
         <p></p>
         <p></p>
         <p className="text-white">Copyright 2023 - Project Horizon</p>

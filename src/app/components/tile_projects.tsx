@@ -4,7 +4,6 @@ import { useMediaQuery } from 'react-responsive';
 
 interface TileProps {
   name: string;
-  title: string;
   imagesrc: string;
   description: string;
 }
@@ -20,7 +19,7 @@ export function useIsMobile() {
   return isMobile;
 }
 
-function Tile({ name, title, description, imagesrc }: TileProps) {
+function TileProject({ name, description, imagesrc }: TileProps) {
   const isMobile = useIsMobile();
 
   return (
@@ -29,12 +28,11 @@ function Tile({ name, title, description, imagesrc }: TileProps) {
         <Image src={imagesrc} alt={name} width={isMobile ? 100 : 800} height={isMobile ? 100 : 500} />
       </figure>
       <div className="card-body max-w-screen-sm">
-        <h3 className="card-title text-red-600">{title}</h3>
-        <h2 className="card-title">{name}</h2>
+        <h2 className="card-title text-red-600">{name}</h2>
         <p>{description}</p>
       </div>
     </div>
   );
 }
 
-export default Tile;
+export default TileProject
