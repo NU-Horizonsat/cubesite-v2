@@ -17,6 +17,11 @@ function Navbar() {
                         </Link>
                     </li>
                     <li>
+                        <Link href="/team">
+                            About
+                        </Link>
+                    </li>
+                    <li>
                         <Link href="/partners">
                             Partners
                         </Link>
