@@ -7,7 +7,7 @@ import {
 
 const Hero = () => {
   return (
-    <div className="hero  min-w-screen h-screen bg-hero-image backdrop-blur-sm">
+    <div className="hero  min-w-screen h-screen bg-hero-image">
       <div className="hero-content text-center">
         <div className="w-auto">
           <div className="flex flex-col items-center justify-center  text-red-600 font-bold py-6 sm:text-md md:text-3xl">
