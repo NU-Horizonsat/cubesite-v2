@@ -1,5 +1,7 @@
+
 'use client';
 import Tile from "../components/tile";
+
 
 const Partners = () => {
     return (
@@ -18,5 +20,5 @@ const Partners = () => {
     </div>
     )
   }
-  
+
   export default Partners

@@ -135,7 +135,7 @@ const Contact = () => {
       </div>
       <div className="w-full flex flex-col space-y-8 items-center">
                 <h5 className="text-white md:text-2xl text-lg font-bold">Want to join our mailing list?</h5>
-                <div className="flex flex-row space-x-4">
+                <div className="flex w-1/2 flex-row space-x-4">
                 <input className="grow p-2 my-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent w-1/2" type="email" placeholder="Email" />
                 <button className="transition-bg my-2 w-1/4 rounded-lg p-2 text-white duration-300 bg-blue-600 hover:bg-blue-900 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white" type="submit">
                   Submit

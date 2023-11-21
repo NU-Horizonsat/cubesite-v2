@@ -1,8 +1,9 @@
-@tailwind base;
+@import url("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.css");
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 /*@font-face {
   font-family: 'Space Mono', monospace;
@@ -31,6 +32,18 @@ body {
     )
     rgb(var(--background-start-rgb));*/
     background-image: linear-gradient(black, black, #750100);
-    
+
 }
 
+span.katex-html {
+  display: none;
+}
+
+/* to get tables in blog to look good
+   without having to write a custom
+   markdown transformer */
+@layer blog {
+  section.blog-content table {
+    @apply table table-zebra;
+  }
+}
