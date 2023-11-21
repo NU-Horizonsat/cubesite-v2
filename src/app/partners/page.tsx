@@ -3,6 +3,7 @@
 import Tile from "../components/tile";
 
 
+
 const Partners = () => {
     return (
       <div className="flex flex-col space-y-8 items-center">
