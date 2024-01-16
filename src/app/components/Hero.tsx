@@ -23,8 +23,7 @@ const Hero = () => {
             <p></p>
           </div>
 
-            <p className="mb-5 text-2xl text-white">Northeastern&apos;s first in-house developed satellite.
-          </p>
+            <p className="mb-5 text-2xl text-white">Northeastern&apos;s First In-House Cubesat Program.</p>
           <Link href="/team">
             <button className=" bg-gray-700 hover:bg-gray-500 text-white py-2 px-4 rounded">
               Meet The Team
