@@ -50,7 +50,7 @@ const Contact = () => {
             </div>
           ) : (
             // name
-            <form onSubmit={handleSubmit} className="flex flex-col space-y-8 items-center ">
+            <form onSubmit={handleSubmit} className="flex flex-col space-y-8 items-center border">
               <div className="flex flex-col space-y-8 items-center ">
                 <label htmlFor="name" className="text-white">Name</label>
                 <input

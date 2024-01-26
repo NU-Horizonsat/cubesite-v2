@@ -19,7 +19,7 @@ function Navbar() {
                     </li>
                     <li>
                         <Link href="/team">
-                            About
+                            Our Team
                         </Link>
                     </li>
                     <li>
