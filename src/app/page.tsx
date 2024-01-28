@@ -15,19 +15,16 @@ export default function Home() {
       <h1 className=" text-white text-5xl text-left">Projects</h1>    
       
         <TileProject
-          name="CubeSat"
-          description="CubeSat is a 1U CubeSat that is being developed by Project Horizon. It is our first satellite and is currently in the design phase."
-          imagesrc="/nasa.png"
+          name="TeraHertz In Space SATellite (THIS-SAT)"
+          description="THIS-Sat is a satellite for testing terahertz-frequency low-earth orbit RF communication. It aims to be the first THz test platform to demonstrate and better understand this form of communication for uplink, downlink, and inter-satellite link in LEO."
         />
         <TileProject
-          name="DevSat"
-          description="DevSat is a 3U CubeSat that is being developed by Project Horizon. It is our second satellite and is currently in the design phase."
-          imagesrc="/nasa.png"
+          name="DevSat-1"
+          description=" DevSat-1 is Project Horizon’s first in-house small satellite. It aims to provide flight heritage to novel technologies that Project Horizon hopes to utilize in future satellite launches."
         />
         <TileProject
-          name="Hemholdtz"
-          description="Hemholdtz is a 6U CubeSat that is being developed by Project Horizon. It is our third satellite and is currently in the design phase."
-          imagesrc="/nasa.png"
+          name="Merrit Coil Cubesat Attitude Test System"
+          description="Helmholtz is an apparatus that will be used to simulate the magnetic field in low earth orbit. It will be used in testing and calibrating the attitude control system of our furture satellites."
         />
         <p></p>
         <p></p>
