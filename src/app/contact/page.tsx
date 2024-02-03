@@ -13,7 +13,7 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/api/send-contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -42,7 +42,7 @@ const Contact = () => {
     <div className="flex flex-col space-y-8 items-center">
       <p></p>
       <p></p>
-      <h1 className=" text-red-600 text-5xl text-center w-1/2 font-bold">CONTACT US</h1>
+      <h1 className="text-red-600 text-5xl text-center w-1/2 font-bold">CONTACT US</h1>
       {isSubmitted ? (
         <div className="flex flex-col space-y-8 items-center ">
           <h2 className="text-2xl text-white">Thank you for your message!</h2>
