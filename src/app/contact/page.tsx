@@ -5,6 +5,7 @@ import { useState } from "react";
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [company, setCompany] = useState("");
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -13,18 +14,15 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const response = await fetch("/api/send-contact", {
+      const message_comp:any = "Message from " + name + " (" + email + ")" + " - " + company +": "+ message;
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          name,
-          email,
-          message,
-        }),
+        body: JSON.stringify({ name, email, message_comp }),
       });
-
+      console.log(response);
       if (response.ok) {
         setIsSubmitted(true);
       } else {
@@ -42,15 +40,15 @@ const Contact = () => {
     <div className="flex flex-col space-y-8 items-center">
       <p></p>
       <p></p>
-      <h1 className="text-red-600 text-5xl text-center w-1/2 font-bold">CONTACT US</h1>
+      <h1 className="text-red-600 text-5xl text-center w-max font-bold">CONTACT US</h1>
       {isSubmitted ? (
-        <div className="flex flex-col space-y-8 items-center ">
+        <div className="space-y-8 items-center ">
           <h2 className="text-2xl text-white">Thank you for your message!</h2>
           <p className="text-white">We will get back to you as soon as possible.</p>
         </div>
       ) : (
         // name
-        <form onSubmit={handleSubmit} className="flex flex-col w-200 space-y-8 items-center">
+        <form onSubmit={handleSubmit} className="flex-col w-1/3 space-y-8 items-center">
           <div className="flex flex-col space-y-8 items-center">
             <label htmlFor="name" className="text-white">Name</label>
             <input
@@ -59,7 +57,7 @@ const Contact = () => {
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="input input-bordered w-full max-w-xs"
+              className="input input-bordered w-full"
             />
           </div>
           {/* email */}
@@ -71,7 +69,7 @@ const Contact = () => {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="input input-bordered w-full max-w-md"
+              className="input input-bordered w-full"
             />
           </div>
           {/* company */}
@@ -81,7 +79,9 @@ const Contact = () => {
               type="text"
               name="company"
               id="company"
-              className="input input-bordered w-full max-w-md"
+              value={company}
+              onChange={(e) => setCompany(e.target.value)}
+              className="input input-bordered w-full"
             />
           </div>
           {/* message */}
@@ -90,10 +90,10 @@ const Contact = () => {
             <textarea
               name="message"
               id="message"
-              rows={4}
+              rows={10}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="input input-bordered w-full max-w-xs"
+              className="input input-bordered w-full"
             />
           </div>
           <div className="flex flex-col space-y-8 items-center ">

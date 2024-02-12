@@ -1,15 +1,15 @@
 'use client';
-import Tile from "../components/tile";
+import Tile from "../../components/tile";
 
 const Team = () => {
     return (
       <div className="flex flex-col space-y-8 items-center">
         <p></p>
         <h1 className=" text-red-600 text-5xl text-left font-bold">OUR LEADS</h1>
-      <Tile title="Project Lead" name="Brian" description="Our avionics team handles all of the software and mathematical calculations responsible for in-orbit operations. Programming, complexity analysis, and control flow are among tasks that avionics is responsible for." imagesrc="/team/brian.jpg"/>
-      <Tile title="Operation Leads" name="Angelika" description="Our mechanical team develops and assembles the structural and mechanical elements of our satellites." imagesrc="/team/angelika.jpg"/>
-      <Tile title="Technical Coordinator" name="John" description="Our electrical team is responsible for how power and data is distributed throughout the satellite. Power analysis, circuit design, and data bus design are all handled by electrical." imagesrc="/team/john.jpg"/>
-      <Tile title="Webmaster" name="Madhav" description="Our flight operations team conducts orbital simulations, trajectory analysis, and calculates optimal orbital parameters for our missions." imagesrc="/team/madhav.jpg"/>
+      <Tile title="Project Lead" name="Brian" description="Our Glorious Leader" imagesrc="/team/brian.jpg"/>
+      <Tile title="Operation Leads" name="Angelika" description="Operations lead oversees project goals on a more immediate time scale and facilitates internal coordination between specific projects." imagesrc="/team/angelika.jpg"/>
+      <Tile title="Technical Coordinator" name="John" description="Technical coordinator facilitates higher level systems-side integration within each specific project." imagesrc="/team/john.jpg"/>
+      <Tile title="Webmaster" name="Madhav" description="???" imagesrc="/team/madhav.jpg"/>
       <p></p>
         <p></p>
         <h1 className=" text-red-600 text-5xl text-left font-bold">OUR TEAM LEADS</h1>

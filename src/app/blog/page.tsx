@@ -1,5 +1,5 @@
 import { allArticles } from "@/util/blog";
-import BlogPostCard from "@/app/components/BlogPostCard";
+import BlogPostCard from "@/components/BlogPostCard";
 
 const BlogPage = async () => {
     const all = (await allArticles())

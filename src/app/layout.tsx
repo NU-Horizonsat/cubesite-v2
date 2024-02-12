@@ -2,7 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
-import Navbar from './components/navbar'
+import Navbar from '../components/navbar'
 import { Space_Mono } from 'next/font/google'
 
 const spaceMono = Space_Mono({
@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Project Horizon@AeroNU',
-  description: 'fill later',
+  description: "Northeastern University's first in-house cubesat program.",
 }
 
 export default function RootLayout({
