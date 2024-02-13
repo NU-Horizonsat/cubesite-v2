@@ -13,7 +13,7 @@ export default function Home() {
        
       <div className="flex flex-col space-y-8 items-center">
       <h1 className=" text-white text-5xl text-left">Projects</h1>    
-      
+      ra
         <TileProject
           name="TeraHertz In Space SATellite (THIS-SAT)"
           description="THIS-Sat is a satellite for testing terahertz-frequency low-earth orbit RF communication. It aims to be the first THz test platform to demonstrate and better understand this form of communication for uplink, downlink, and inter-satellite link in LEO."
