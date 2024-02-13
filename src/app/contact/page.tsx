@@ -48,7 +48,7 @@ const Contact = () => {
         </div>
       ) : (
         // name
-        <form onSubmit={handleSubmit} className="flex-col w-1/3 space-y-8 items-center">
+        <form onSubmit={handleSubmit} className="flex-col w-2/3 space-y-8 items-center">
           <div className="flex flex-col space-y-8 items-center">
             <label htmlFor="name" className="text-white">Name</label>
             <input
