@@ -4,7 +4,7 @@ import TileProject from '../components/tile_projects'
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-gradient-to-b from-black via-black to-red">
       <div className="space-y-6">
         <Hero />
       </div>
@@ -12,8 +12,7 @@ export default function Home() {
       </div>
        
       <div className="flex flex-col space-y-8 items-center">
-      <h1 className=" text-white text-5xl text-left">Projects</h1>    
-      ra
+      <h1 className=" text-white text-5xl text-left">Projects</h1>
         <TileProject
           name="TeraHertz In Space SATellite (THIS-SAT)"
           description="THIS-Sat is a satellite for testing terahertz-frequency low-earth orbit RF communication. It aims to be the first THz test platform to demonstrate and better understand this form of communication for uplink, downlink, and inter-satellite link in LEO."
