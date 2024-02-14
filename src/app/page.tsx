@@ -4,7 +4,7 @@ import TileProject from '../components/tile_projects'
 
 export default function Home() {
   return (
-    <main className="bg-gradient-to-b from-black via-black to-red">
+    <main className="bg-gradient-to-b from-black from-30% via-black via-50% to-red to-90%">
       <div className="space-y-6">
         <Hero />
       </div>
