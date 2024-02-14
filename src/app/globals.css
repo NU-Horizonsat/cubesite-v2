@@ -5,8 +5,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Space Mono', monospace;
+
+body {
+  font-family: "Space Mono", monospace;
 }
 
 :root {
