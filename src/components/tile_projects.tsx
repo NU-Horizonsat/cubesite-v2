@@ -37,7 +37,7 @@ function TileProject({ name, description, id, long_desc, image, credits }: TileP
           <p>{description}</p>
         </div>
       </div>
-      <dialog id={id} className="modal-bottom sm:modal-middle text-white">
+      <dialog id={id} className="modal modal-bottom sm:modal-middle text-white">
         <div className="modal-box  bg-gradient-to-t from-black to-gray-950 w-2/3 max-w-6xl">
           <h3 className="font-bold text-lg">{name}</h3>
           <div className="flex flex-col space-y-2">
