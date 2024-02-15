@@ -69,7 +69,7 @@ const Contact = () => {
           <div className="flex flex-col space-y-8 items-center">
             <label htmlFor="name" className="text-white">Name</label>
             <Input
-              isRequired
+
               size="md"
               type="text"
               name="Name"
@@ -83,7 +83,7 @@ const Contact = () => {
           <div className="flex flex-col space-y-8 items-center ">
             <label htmlFor="email" className="text-white">Email</label>
             <Input
-              isRequired
+
               size="md"
               type="email"
               name="E-mail"
@@ -111,7 +111,7 @@ const Contact = () => {
           <div className="flex flex-col space-y-8 items-center">
             <label htmlFor="message" className="text-white">Message</label>
             <Textarea
-              isRequired
+
               size="md"
 
               name="Message"
