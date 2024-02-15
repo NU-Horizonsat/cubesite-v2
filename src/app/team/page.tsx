@@ -6,10 +6,10 @@ const Team = () => {
       <div className="flex flex-col space-y-8 items-center">
         <p></p>
         <h1 className=" text-red-600 text-5xl text-left font-bold">OUR LEADS</h1>
-      <Tile title="Project Lead" name="Brian Hulbert" description="The project lead is in charge of our overall program, ensuring that all students interested in building satellites can join us on our mission. " imagesrc="/team/brian.jpg"/>
-      <Tile title="Operation Lead" name="Angelika Bouley" description="The operation lead oversees project goals on a more immediate time scale and facilitates internal coordination between specific projects." imagesrc="/team/angelika.jpg"/>
-      <Tile title="Technical Coordinator" name="John Kerr" description="The technical coordinator facilitates higher level systems-side integration within each specific project." imagesrc="/team/john.jpg"/>
-      <Tile title="Webmaster" name="Madhav Kapa" description="The webmaster is responsible for designing and updating this website and maintaining our project’s internal wiki page." imagesrc="/team/madhav.jpg"/>
+      <Tile title="Program Lead" name="Brian Hulbert" description="Our project lead is in charge of our overall program, ensuring that all students interested in building satellites can join us on our mission. " imagesrc="/team/brian.jpg"/>
+      <Tile title="Operations Lead" name="Angelika Bouley" description="Our operation lead oversees project goals on a more immediate time scale and facilitates internal coordination between specific projects." imagesrc="/team/angelika.jpg"/>
+      <Tile title="Technical Coordinator" name="John Kerr" description="Our technical coordinator facilitates higher level systems-side integration within each specific project." imagesrc="/team/john.jpg"/>
+      <Tile title="Webmaster" name="Madhav Kapa" description="Our webmaster is responsible for designing and updating this website and maintaining our project’s internal wiki page." imagesrc="/team/madhav.jpg"/>
       <p></p>
         <p></p>
         <h1 className=" text-red-600 text-5xl text-left font-bold">OUR TEAM LEADS</h1>
