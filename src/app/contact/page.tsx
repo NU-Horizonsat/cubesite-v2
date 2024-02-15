@@ -16,7 +16,8 @@ const Contact = () => {
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     if (!(name == "" && email == "" && company == "" && message == "")) {
-      setIsSubmitting(true);
+      if (RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(email)) {
+        setIsSubmitting(true);
       try {
         const message_comp: any = "Message from " + name + " (" + email + ")" + " - " + company + ": " + message;
         const response = await fetch("/api/contact", {
@@ -35,6 +36,9 @@ const Contact = () => {
         }
       } catch (error) {
         console.error(error);
+      }}
+      else{
+        setError("Invalid email address!")
       }
     }else{
       setError("Please fill in all fields!")
