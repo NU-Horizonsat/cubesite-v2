@@ -61,7 +61,7 @@ const Contact = () => {
                 id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="input input-bordered w-full"
+                className="w-full"
               />
             </div>
             {/* email */}
@@ -73,7 +73,7 @@ const Contact = () => {
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="input input-bordered w-full"
+                className="w-full"
               />
             </div>
             {/* company */}
@@ -85,7 +85,7 @@ const Contact = () => {
                 id="company"
                 value={company}
                 onChange={(e) => setCompany(e.target.value)}
-                className="input input-bordered w-full"
+                className="w-full"
               />
             </div>
             {/* message */}
@@ -98,7 +98,7 @@ const Contact = () => {
                 value={message}
                 maxLength={2000}
                 onChange={(e) => setMessage(e.target.value)}
-                className="input input-bordered w-full"
+                className="w-full"
               />
             </div>
             {(error === "") ? null : <div
