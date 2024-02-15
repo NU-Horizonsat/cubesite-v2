@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from "react";
+import {Textarea, Input} from "@nextui-org/react"
+
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -53,9 +55,9 @@ const Contact = () => {
           <form onSubmit={handleSubmit} className="flex-col w-2/3 space-y-8 items-center">
             <div className="flex flex-col space-y-8 items-center">
               <label htmlFor="name" className="text-white">Name</label>
-              <input
+              <Input
                 type="text"
-                name="name"
+                name="Name"
                 id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -65,9 +67,9 @@ const Contact = () => {
             {/* email */}
             <div className="flex flex-col space-y-8 items-center ">
               <label htmlFor="email" className="text-white">Email</label>
-              <input
+              <Input
                 type="email"
-                name="email"
+                name="E-mail"
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -77,9 +79,9 @@ const Contact = () => {
             {/* company */}
             <div className="flex flex-col space-y-8 items-center ">
               <label htmlFor="company" className="text-white">Company</label>
-              <input
+              <Input
                 type="text"
-                name="company"
+                name="Company"
                 id="company"
                 value={company}
                 onChange={(e) => setCompany(e.target.value)}
@@ -89,11 +91,12 @@ const Contact = () => {
             {/* message */}
             <div className="flex flex-col space-y-8 items-center">
               <label htmlFor="message" className="text-white">Message</label>
-              <textarea
-                name="message"
+              <Textarea
+                name="Message"
                 id="message"
                 rows={10}
                 value={message}
+                maxLength={2000}
                 onChange={(e) => setMessage(e.target.value)}
                 className="input input-bordered w-full"
               />
