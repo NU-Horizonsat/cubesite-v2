@@ -31,9 +31,9 @@ function TileProject({ name, description, id, long_desc, image, credits }: TileP
   return (
     <div>
       {/* @ts-ignore */}
-      <div className={`card ${isMobile ? 'card-compact' : 'card-side'} hover:text-gray hover:cursor-pointer text-white bg-gradient-to-t from-black to-gray-950 shadow-xl hover:to-black ${isMobile ? 'max-w-screen-sm' : 'max-w-screen-md'}`} onClick={() => document.getElementById(id)!.showModal()}>
+      <div className={`card ${isMobile ? 'card-compact' : 'card-side'} hover:cursor-pointer text-white bg-gradient-to-t from-black to-gray-950 shadow-xl hover:to-black ${isMobile ? 'max-w-screen-sm' : 'max-w-screen-md'}`} onClick={() => document.getElementById(id)!.showModal()}>
         <div className="card-body max-w-screen-sm">
-          <h2 className="card-title text-red-600 ">{name}</h2>
+          <h2 className="card-title text-red-600 hover:text-gray-300">{name}</h2>
           <p>{description}</p>
         </div>
       </div>
