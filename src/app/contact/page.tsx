@@ -1,8 +1,6 @@
 'use client'
 
 import { useState } from "react";
-import { Textarea, Input } from "@nextui-org/react"
-import React from "react";
 
 
 const Contact = () => {
@@ -65,40 +63,57 @@ const Contact = () => {
           <p className="text-white">We will get back to you as soon as possible.</p>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="w-3/4 items-center">
-            <Input
-              type="text"
+        <form onSubmit={handleSubmit} className="flex-col w-3/4 space-y-8 items-center">
+          <div className="flex flex-col space-y-8 items-center">
+            <label htmlFor="name" className="text-white">Name</label>
+            <input
+
+             type="text"
               name="Name"
-              placeholder="Name"
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              className="input input-bordered w-3/4"
             />
-            <Input
-              type="email"
+          </div>
+          {/* email */}
+          <div className="flex flex-col space-y-8 items-center ">
+            <label htmlFor="email" className="text-white">Email</label>
+            <input
+
+             type="email"
               name="E-mail"
-              placeholder="E-mail"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              className="input input-bordered w-3/4"
             />
-            <Input
+          </div>
+          {/* company */}
+          <div className="flex flex-col space-y-8 items-center ">
+            <label htmlFor="company" className="text-white">Company</label>
+            <input
               type="text"
               name="Company"
-              placeholder="Company"
               id="company"
               value={company}
               onChange={(e) => setCompany(e.target.value)}
+              className="input input-bordered w-3/4"
             />
-            <Textarea
+          </div>
+          {/* message */}
+          <div className="flex flex-col space-y-8 items-center">
+            <label htmlFor="message" className="text-white">Message</label>
+            <textarea
               name="Message"
-              placeholder="Message"
               id="message"
-              rows={10}
+              rows={4}
               value={message}
               maxLength={2000}
               onChange={(e) => setMessage(e.target.value)}
+              className="textarea textarea-bordered w-3/4"
             />
+          </div>
           {(error === "") ? null : <div
             className="flex flex-col space-y-8 items-center bg-red-900 border p-5 rounded-xl">
             <p className="text-white">{error}</p>
