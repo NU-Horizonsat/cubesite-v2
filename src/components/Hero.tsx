@@ -7,7 +7,7 @@ import {
 
 const Hero = () => {
   return (
-    <div className="hero min-w-screen h-screen bg-hero-image">
+    <div className="hero min-w-screen h-96 md:h-screen bg-hero-image ">
       {/* i just blured the image like the file */}
       <div className="hero-content text-center ">
         <div className="w-auto">

@@ -8,7 +8,7 @@ export default function Home() {
       <div className="space-y-6">
         <Hero />
       </div>
-      <div className="pt-48 pb-3 pl-48">
+      <div className="pt-20 pb-3 pl-20">
       </div>
        
       <div className="flex flex-col space-y-8 items-center">
