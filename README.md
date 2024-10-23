@@ -1,3 +1,9 @@
+# Student Satellite Club - Northeastern University
+
+This is the official project website for the **Student Satellite Club** at Northeastern University, developed using **Next.js**, **React.js**, and **Tailwind CSS**. The website showcases the team's accomplishments and ongoing projects!
+Below is some instructions to run the project locally!
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
