@@ -1,6 +1,6 @@
-# Student Satellite Club - Northeastern University
+# Project Horizon - Northeastern University
 
-This is the official project website for the **Student Satellite Club** at Northeastern University, developed using **Next.js**, **React.js**, and **Tailwind CSS**. The website showcases the team's accomplishments and ongoing projects!
+This is the official project website for **Project Horizon** at Northeastern University, developed using **Next.js**, **React.js**, and **Tailwind CSS**. The website showcases the team's accomplishments and ongoing projects!
 Below is some instructions to run the project locally!
 
 
