@@ -22,10 +22,10 @@ export default function Home() {
           credits=''
           />
         <TileProject
-          name="DevSat-1"
-          description=" DevSat-1 is Project Horizon’s first in-house small satellite. It aims to provide flight heritage to novel technologies that Project Horizon hopes to utilize in future satellite launches."
+          name="Pleiades - Atlas"
+          description=" Pleiades - Atlas is Project Horizon’s first in-house small satellite. It aims to provide flight heritage to novel technologies that Project Horizon hopes to utilize in future satellite launches."
           id='modal2'
-          long_desc='Development Satellite-1 is Project Horizon’s first foray into space as a university small satellite program. DevSat-1 is a 1U satellite bus based on the PROVES satellite kit designed by Cal-Poly Pomona’s Bronco Space Program. The DevSat line of satellites will facilitate an internal pipeline of rapid satellite development and payload integration to test novel technologies that Project Horizon hopes to utilize for future launches. Accordingly, DevSat-1’s mission is to serve as a test platform for novel software and hardware that will facilitate the success of THIS-Sat’s mission specifically. Some things that will be tested on DevSat-1 include advanced compression algorithms and small-scale splitting mechanisms. '
+          long_desc='Pleiades - Atlas is Project Horizon’s first foray into space as a university small satellite program. Pleiades - Atlas is a 1U satellite bus based on the PROVES satellite kit designed by Cal-Poly Pomona’s Bronco Space Program. The Pleiades line of satellites will facilitate an internal pipeline of rapid satellite development and payload integration to test novel technologies that Project Horizon hopes to utilize for future launches. Accordingly, Pleiades - Atlas’s mission is to serve as a test platform for novel software and hardware that will facilitate the success of THIS-Sat’s mission specifically. Some things that will be tested on Pleiades - Atlas include advanced compression algorithms and small-scale splitting mechanisms. '
           image='/projects/devsat.png'
           credits=''
         />
