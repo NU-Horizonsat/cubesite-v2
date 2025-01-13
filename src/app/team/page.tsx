@@ -2,26 +2,89 @@
 import Tile from "../../components/tile";
 
 const Team = () => {
-    return (
-      <div className="flex flex-col space-y-8 items-center">
-        <p></p>
-        <h1 className=" text-red-600 text-5xl text-left font-bold">OUR LEADS</h1>
-      <Tile title="Program Lead" name="Brian Hulbert" description="Our program lead is in charge of our overall program, ensuring that all students interested in building satellites can join us on our mission. " imagesrc="/team/brian.jpg"/>
-      <Tile title="Operations Lead" name="Angelika Bouley" description="Our operations lead oversees project goals on a more immediate time scale and facilitates internal coordination between specific projects." imagesrc="/team/angelika.jpg"/>
-      <Tile title="Technical Coordinator" name="John Kerr" description="Our technical coordinator facilitates higher level systems-side integration within each specific project." imagesrc="/team/john.jpg"/>
-      <Tile title="Webmaster" name="Madhav Kapa" description="Our webmaster is responsible for designing and updating this website and maintaining our project’s internal wiki page." imagesrc="/team/madhav.jpg"/>
-      <p></p>
-        <p></p>
-        <h1 className=" text-red-600 text-5xl text-left font-bold">OUR TEAM LEADS</h1>
-      <Tile title="Avionics" name="Julia Keadey" description="Our avionics team handles all of the software and mathematical calculations responsible for in-orbit operations. Programming, complexity analysis, and control flow are among tasks that avionics is responsible for." imagesrc="/team/julia.jpg"/>
-      <Tile title="Space Mechanics" name="Matt O'Rourke" description="Our mechanical team develops and assembles the structural and mechanical elements of our satellites." imagesrc="/team/matt.jpg"/>
-      <Tile title="Electrical" name="Jack Hester" description="Our electrical team is responsible for how power and data is distributed throughout the satellite. Power analysis, circuit design, and data bus design are all handled by electrical." imagesrc="/team/jack.jpg"/>
-      <Tile title="Flight Ops" name="Ryan Boyd" description="Our flight operations team conducts orbital simulations, trajectory analysis, and calculates optimal orbital parameters for our missions." imagesrc="/team/ryan.jpg"/>
-      <p></p>
+  return (
+    <div className="flex flex-col space-y-8 items-center">
+      {/* Section: Leads */}
+      <h1 className="text-red-600 text-5xl text-left font-bold">OUR MANAGEMENT</h1>
+      <Tile
+        title="Program Lead"
+        name="Rachel Rakushkin"
+        description="Our program lead oversees the entire program, ensuring all students interested in building satellites can join us on our mission."
+        imagesrc="/team/rachel.jpg"
+      />
+      <Tile
+        title="Operations Lead"
+        name="Aniket Chaudhry"
+        description="Our operations lead manages project goals on a short-term scale and coordinates internally between specific teams."
+        imagesrc="/team/aniket.PNG"
+      />
+      <Tile
+        title="Technical Coordinator"
+        name="Madhav Kapa"
+        description="Our technical coordinator ensures seamless systems integration across various projects."
+        imagesrc="/team/madhav.jpg"
+      />
+
+      {/* Section: Team Leads */}
+      <h1 className="text-red-600 text-5xl text-left font-bold">OUR TEAM LEADS</h1>
+      <Tile
+        title="Flight Software"
+        name="Ganesh Danke"
+        description="Our flight software team develops and maintains all software for in-orbit operations, including programming, complexity analysis, and control flow."
+        imagesrc="/team/ganesh.jpg"
+      />
+      <Tile
+        title="Electrical"
+        name="Jacob Oshinsky"
+        description="Our electrical team ensures power and data distribution throughout the satellite, focusing on power analysis, circuit design, and data bus management."
+        imagesrc="/team/jacob.jpg"
+      />
+      <Tile
+        title="Mechanical"
+        name="Laura Teixeira"
+        description="Our mechanical team designs and assembles the structural and mechanical elements of our satellites, ensuring reliability and strength."
+        imagesrc="/team/laura.jpg"
+      />
+      <Tile
+        title="Mission Operations - Flight"
+        name="Rajiv Iyer"
+        description="Our flight operations team conducts orbital simulations, trajectory analysis, and calculates optimal orbital parameters for missions."
+        imagesrc="/team/rajiv.jpg"
+      />
+      <Tile
+        title="Mission Operations - Ground"
+        name="Aniket Chaudhry"
+        description="Our ground operations team monitors satellite health, tracks orbital changes, and maintains communications with deployed satellites."
+        imagesrc="/team/aniket.PNG"
+      />
+
+      {/* Section: Advisors */}
+      <h1 className="text-red-600 text-5xl text-left font-bold">OUR ADVISORS</h1>
+      <Tile
+        title="Program Advisor"
+        name="Brian Hulbert"
+        description="Our program advisor provides strategic guidance and ensures alignment with our mission goals."
+        imagesrc="/team/brian.jpg"
+      />
+      <Tile
+        title="Mechanical Advisor"
+        name="Matt O'Rourke"
+        description="Our mechanical advisor supports the team with expertise in structural and mechanical design."
+        imagesrc="/team/matt.jpg"
+      />
+      <Tile
+        title="Technical Advisor"
+        name="John Kerr"
+        description="Our technical advisor offers insights and solutions for advanced systems integration and technical challenges."
+        imagesrc="/team/john.jpg"
+      />
+
+      {/* Footer */}
       <p className="text-white">Copyright 2023 - Project Horizon</p>
-    <p></p>
+      <p></p>
     </div>
-    )
-  }
-  
-  export default Team
+    
+  );
+};
+
+export default Team;
